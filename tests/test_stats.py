@@ -22,10 +22,10 @@ def test_summarises_all_nan():
     summary = ci_course.summarise(np.array([np.nan, np.nan, np.nan]))
 
     assert summary["n"] == 0
-    assert summary["mean"] == 0.0
-    assert summary["min"] == 0.0
-    assert summary["max"] == 0.0
-    assert summary["sd"] == 0.0
+    assert np.isnan(summary["mean"])
+    assert summary["min"] == float('nan') 
+    assert summary["max"] == float('nan')
+    assert summary["sd"] == float('nan')    
 
 def test_summarises_every_column():
     summaries = ci_course.summarise_all(ci_course.load_measurements())
