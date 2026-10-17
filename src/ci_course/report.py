@@ -55,5 +55,4 @@ def write_report(summaries, path):
 
     #os.rename(tmp, path) #this doesnt work on windows since rename does not overwrite
     os.replace(tmp, path)
-    
     return path
