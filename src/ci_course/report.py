@@ -53,5 +53,7 @@ def write_report(summaries, path):
     with open(tmp, "w", encoding="utf-8") as handle:
         handle.write(format_report(summaries))
 
-    os.rename(tmp, path)
+    #os.rename(tmp, path) #this doesnt work on windows since rename does not overwrite
+    os.replace(tmp, path)
+    
     return path
