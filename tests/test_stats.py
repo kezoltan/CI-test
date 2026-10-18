@@ -23,9 +23,9 @@ def test_summarises_all_nan():
 
     assert summary["n"] == 0
     assert np.isnan(summary["mean"])
-    assert np.isnan(summary["min"]) 
+    assert np.isnan(summary["min"])
     assert np.isnan(summary["max"])
-    assert np.isnan(summary["sd"])    
+    assert np.isnan(summary["sd"])
 
 def test_summarises_every_column():
     summaries = ci_course.summarise_all(ci_course.load_measurements())
