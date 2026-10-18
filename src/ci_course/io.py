@@ -2,7 +2,6 @@
 
 import csv
 from pathlib import Path
-
 import numpy as np
 
 
@@ -43,7 +42,7 @@ def load_measurements(path=None, errors=None):
     if path is None:
         path = sample_data_path()
     if errors is None:
-        errors = ["hello-world"]
+        errors = ["hello-world", "hello-world", "hello-world"]
 
     with open(path, newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle)
