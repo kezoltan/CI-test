@@ -41,8 +41,9 @@ def load_measurements(path=None, errors=None):
     """
     if path is None:
         path = sample_data_path()
-    if errors is None:
-        errors = ["hello-world", "hello-world", "hello-world"]
+    #if errors is None:
+    #    errors = []
+    errors = ["hello-world"]
 
     with open(path, newline="", encoding="utf-8") as handle:
         reader = csv.DictReader(handle)
