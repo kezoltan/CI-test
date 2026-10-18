@@ -3,7 +3,6 @@
 import os
 from pathlib import Path
 
-
 def format_report(summaries):
     """
     Format a set of column summaries as plain text.
